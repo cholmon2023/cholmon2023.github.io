@@ -57,20 +57,54 @@
 
     /* HERO */
     .hero {
-      background: linear-gradient(135deg, #0f172a, #1f2937);
-      color: white;
+      position: relative;
+      height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 100px 20px;
+
+      background-image: url("images/hero.jpg");
+      background-size: cover;
+      background-position: center;
     }
 
-    .hero h1 {
-      font-size: 44px;
-      margin-bottom: 10px;
+    /* 黑色遮罩（关键让文字高级） */
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      background: rgba(15, 23, 42, 0.55);
     }
 
-    .hero p {
-      font-size: 16px;
-      opacity: 0.9;
+    /* 内容层 */
+    .hero-content {
+      position: relative;
+      color: white;
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+
+    .hero-content p {
+      color: #cbd5e1;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        height: 320px;
+      }
+
+      .hero-content h1 {
+        font-size: 32px;
+      }
     }
 
     /* SECTION */
@@ -129,19 +163,45 @@
 
     /* FOOTER */
     .footer {
-      background: #fff;
-      text-align: center;
+      background:#f8fafc;
       padding: 50px 20px;
-      font-size: 14px;
+      border-top: 1px solid #e5e7eb;
+      text-align: center;
     }
 
-    a {
-      color: #2563eb;
+    /* 标题居中 */
+    .footer h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* 联系方式左对齐 */
+    .footer-info {
+      display: inline-block;
+      text-align: left;
+      margin: 12px 0;
+      color: #4b5563;
+    }
+
+
+
+    /* 链接颜色 */
+    .footer a {
+      text-decoration: none;
+      color: #1e3a8a;
+    }
+
+    /* 版权单独居中 */
+    .copyright {
+      margin-top: 35px;
+      text-align: center;
+      color: #6b7280;
+      font-size: 14px;
     }
   </style>
 </head>
 
-<body>
+<body id="top">
 
   <!-- NAV -->
   <div class="nav">
@@ -150,7 +210,7 @@
       HUNNU STONE
     </div>
     <div>
-      <a href="#home">Нүүр</a>
+      <a href="#top">Нүүр</a>
       <a href="#about">Бидний тухай</a>
       <a href="#product">Бүтээгдэхүүн</a>
       <a href="#scene">Хэрэглээ</a>
@@ -160,10 +220,13 @@
   </div>
 
   <!-- HERO -->
-  <div class="hero" id="home">
-    <h1>HUNNU STONE</h1>
-    <p>Монголын хөдөлгөөнт ба үйлдвэрлэлийн шийдэл</p>
-    <p>Цахилгаан тээвэр • Шатахуунт тээвэр • Аж ахуйн техник</p>
+  <div class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>ХҮННҮ <img src="images/logo22.png"  style="height:75px;"> ЧУЛУУ</h1>
+      <p>Монголын хөдөлгөөнт ба үйлдвэрлэлийн шийдэл</p>
+      <p>Цахилгаан тээвэр • Шатахуунт тээвэр • Аж ахуйн техник</p>
+    </div>
   </div>
 
   <!-- ABOUT -->
@@ -238,11 +301,31 @@
 
   <!-- CONTACT -->
   <div class="footer" id="contact">
-    <h2>Холбоо барих</h2>
-    <p>📞 94577757</p>
-    <p>Facebook: <a href="https://www.facebook.com/HunnuStone">Hunnu Stone</a></p>
-    <p>hunnustone.com</p>
+
+    <h3>Холбоо барих</h3>
+
+    <div class="footer-info">
+      <p>📞 94577757</p>
+
+      <p>📘 Facebook:
+        <a href="https://www.facebook.com/HunnuStone">Hunnu Stone</a>
+      </p>
+
+      <p>📧 Email: HunnuStone@gmail.com</p>
+
+      <p>🌐 Website:
+        <a href="http://hunnustone.com">www.hunnustone.com</a>
+      </p>
+      <p>&nbsp;📍 Ulaanbaatar, Mongolia</p>
+    </div>
+
+    <p class="copyright">
+      © 2026 Hunnu Stone. All rights reserved.
+    </p>
+
   </div>
+
+
 
 </body>
 
