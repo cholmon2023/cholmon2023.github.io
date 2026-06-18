@@ -6,256 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hunnu Stone | Монголын хөдөлгөөнт шийдэл</title>
   <link rel="icon" type="image/png" href="assets/logo.png">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f6f8fb;
-      color: #1a1a1a;
-    }
-
-    /* NAV */
-    .nav {
-      position: sticky;
-      top: 0;
-      background: #ffffff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 28px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-      z-index: 1000;
-    }
-
-    .logo {
-      font-weight: bold;
-      font-size: 18px;
-      letter-spacing: 1px;
-      display: flex;
-      align-items: center;
-      /* 垂直居中 */
-      gap: 10px;
-      /* 图片和文字间距 */
-    }
-
-    .logo img {
-      height: 40px;
-    }
-
-    .nav a {
-      margin-left: 18px;
-      text-decoration: none;
-      color: #333;
-      font-size: 14px;
-    }
-
-    .nav a:hover {
-      color: #000;
-      font-weight: bold;
-    }
-
-    /* HERO */
-    .hero {
-      position: relative;
-      height: 420px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-
-      background-image: url("images/hero.jpg");
-      background-size: cover;
-      background-position: center;
-    }
-
-    /* 黑色遮罩（关键让文字高级） */
-    .hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-
-      background: rgba(15, 23, 42, 0.55);
-    }
-
-    /* 内容层 */
-    .hero-content {
-      position: relative;
-      color: white;
-      max-width: 800px;
-      padding: 20px;
-    }
-
-    .hero-content h1 {
-      font-size: 48px;
-      margin: 0;
-    }
-
-    .hero-content p {
-      color: #cbd5e1;
-    }
-
-    @media (max-width: 768px) {
-      .hero {
-        height: 320px;
-      }
-
-      .hero-content h1 {
-        font-size: 32px;
-      }
-    }
-
-    /* SECTION */
-    .section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 70px 20px;
-    }
-
-    .title {
-      font-size: 26px;
-      margin-bottom: 20px;
-    }
-
-    .sub {
-      color: #666;
-      margin-bottom: 25px;
-    }
-
-    /* GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-      display: block;
-      color: #111827;
-      text-decoration: none;
-    }
-
-    /* 产品卡片：图片占满上半区，顶部与卡片一体圆角，下方直角接文字 */
-    .card:has(> img) {
-      padding: 0;
-    }
-
-    .card:has(> img) img {
-      display: block;
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-      object-position: center;
-      border-radius: 12px 12px 0 0;
-    }
-
-    .card:has(> img) h3 {
-      margin: 0;
-      padding: 18px 22px 8px;
-      font-size: 18px;
-    }
-
-    .card:has(> img) p {
-      margin: 0;
-      padding: 0 22px 22px;
-      color: #666;
-      font-size: 14px;
-    }
-
-    /* 纯文字卡片（应用场景区） */
-    .card:not(:has(> img)) {
-      padding: 22px;
-    }
-
-    /* FINANCE */
-    .finance {
-      background: #111827;
-      color: white;
-      padding: 70px 20px;
-      text-align: center;
-    }
-
-    .finance ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .finance li {
-      margin: 10px 0;
-      opacity: 0.9;
-    }
-
-    /* FOOTER */
-    .footer {
-      background:#ffffff;
-      padding: 20px 20px;
-      border-top: 2px solid #e3e3e4;
-      text-align: center;
-    }
-
-    /* 标题居中 */
-    .footer h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    /* 联系方式左对齐 */
-    .footer-info {
-      display: inline-block;
-      text-align: left;
-      margin: 12px 0;
-      color: #4b5563;
-    }
-
-
-
-    /* 链接颜色 */
-    .footer a {
-      text-decoration: none;
-      color: #1e3a8a;
-    }
-
-    /* 版权单独居中 */
-    .copyright {
-      margin-top: 35px;
-      text-align: center;
-      color: #6b7280;
-      font-size: 14px;
-    }
-  </style>
+  <link rel="stylesheet" href="css/site.css">
 </head>
 
 <body id="top">
 
   <!-- NAV -->
   <div class="nav">
-    <div class="logo">
-      <img src="assets/logo.png" alt="logo" style="height:40px;">
+    <a class="logo" href="#top">
+      <img src="assets/logo.png" alt="logo">
       HUNNU STONE
-    </div>
-    <div>
+    </a>
+    <div class="nav-links">
       <a href="#top">Нүүр</a>
       <a href="#about">Бидний тухай</a>
       <a href="#product">Бүтээгдэхүүн</a>
       <a href="#scene">Хэрэглээ</a>
-      <a href="#finance">Санхүүжилт</a>
+      <a href="#service">үйлчилгээ</a>
       <a href="#contact">Холбоо</a>
     </div>
   </div>
 
   <!-- HERO -->
-  <div class="hero">
+  <div class="hero hero--home">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>ХҮННҮ <img src="images/logo22.png"  style="height:75px;"> ЧУЛУУ</h1>
+      <h1>ХҮННҮ <img src="images/logo22.png" alt=""> ЧУЛУУ</h1>
       <p>Монголын хөдөлгөөнт ба үйлдвэрлэлийн шийдэл</p>
       <p>Цахилгаан тээвэр • Шатахуунт тээвэр • Аж ахуйн техник</p>
+      <h2>Монгол дахь цахилгаан 3 дугуйтын албан ёсны худалдаа</h2>
     </div>
   </div>
 
@@ -268,6 +47,12 @@
       юм.
       Бидний зорилго бол хөдөө болон хотын хэрэглээнд тохирсон найдвартай шийдлийг хүргэх юм.
     </p>
+    <p>Монгол дахь цахилгаан 3 дугуйтын албан ёсны худалдаа
+
+✓ Бэлэн худалдаа
+✓ Сэлбэг хэрэгсэл
+✓ Засвар үйлчилгээ
+✓ Лизинг боломжтой</p>
   </div>
 
   <!-- PRODUCTS -->
@@ -275,26 +60,26 @@
     <div class="title">Бүтээгдэхүүн</div>
     <div class="sub">5–15 жилийн ашиглалтын хугацаатай, өргөн хэрэглээний техникүүд</div>
 
-    <div class="grid">
-      <a href="products/electric.html" style="text-decoration:none;">
+    <div class="grid grid--3">
+      <a class="card-link" href="products/electric.html">
         <div class="card">
-          <img src="images/electric.jpg">
+          <img src="images/electric.jpg" alt="Цахилгаан гурван дугуйт">
           <h3>Цахилгаан гурван дугуйт</h3>
           <p>Хот болон хөдөө ашиглахад тохиромжтой, бага зардалтай тээвэр.</p>
           <p>Үнэ: 2,500 – 8,000 USD</p>
         </div>
       </a>
-      <a href="products/gas.html" style="text-decoration:none;">
+      <a class="card-link" href="products/gas.html">
         <div class="card">
-          <img src="images/gas.jpg">
+          <img src="images/gas.jpg" alt="Шатахуунт гурван дугуйт">
           <h3>Шатахуунт гурван дугуйт</h3>
           <p>Хүнд ачаа болон хол зайд зориулагдсан хүчтэй тээвэр.</p>
           <p>Үнэ: 3,000 – 10,000 USD</p>
         </div>
       </a>
-      <a href="products/agri.html" style="text-decoration:none;">
+      <a class="card-link" href="products/agri.html">
         <div class="card">
-          <img src="images/agri.jpg">
+          <img src="images/agri.jpg" alt="Аж ахуйн техник">
           <h3>Аж ахуйн техник</h3>
           <p>Хөдөө аж ахуй, жижиг бизнесийн зориулалттай тоног төхөөрөмж.</p>
           <p>Үнэ: 2,500 – 20,000 USD</p>
@@ -309,28 +94,40 @@
     <div class="sub">Бодит хэрэглээнд суурилсан шийдлүүд</div>
 
     <div class="grid">
-      <div class="card">🏗 Барилгын талбайн тээвэр</div>
-      <div class="card">🐎 Мал аж ахуй, хөдөө орон нутаг</div>
-      <div class="card">📦 Жижиг бизнес, хүргэлт үйлчилгээ</div>
-      <div class="card">🌾 Хөдөө аж ахуйн үйлдвэрлэл</div>
+      <a class="card-link" href="scenes/construction.html">
+        <div class="card">🏗 Барилгын талбайн тээвэр  &emsp;&emsp;&emsp;&emsp; </div>
+      </a>
+      <a class="card-link" href="scenes/livestock.html">
+        <div class="card">🐎 Мал аж ахуй, хөдөө орон нутаг</div>
+      </a>
+      <a class="card-link" href="scenes/delivery.html">
+        <div class="card">📦 Жижиг бизнес, хүргэлт үйлчилгээ</div>
+      </a>
+      <a class="card-link" href="scenes/farm.html">
+        <div class="card">🌾 Газар тариалан, Хөдөө аж ахуйн үйлдвэрлэл</div>
+      </a>
+       <a class="card-link" href="scenes/farm.html">
+        <div class="card">🏠 Гэр хороолол  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</div>
+      </a>
     </div>
   </div>
 
-  <!-- FINANCE -->
-  <!-- <div class="finance" id="finance">
-     <h2>Санхүүжилт & Лизинг</h2>
+  <!-- SERVICE -->
+  <div class="section" id="service">
+    <div class="title">Засвар үйлчилгээ, сэлбэг</div>
+    <div class="sub">HUNNU STONE CARE CENTER</div>
 
-    <p>Монголд тээврийн хэрэгслийн зээлийн эрэлт тогтмол өсч байна.</p>
-
-    <ul>
-      <li>Сарын борлуулалтын потенциал: 15–30+ нэгж</li>
-      <li>Хэрэглэгчийн өндөр эрэлт</li>
-      <li>Бүтээгдэхүүний ашиглалтын хугацаа: 5–15 жил</li>
-      <li>Дахин борлуулалтын үнэ тогтвортой</li>
-    </ul>
-
-    <p>Бид санхүүгийн байгууллагуудтай урт хугацааны хамтын ажиллагаа хөгжүүлэхэд нээлттэй.</p>
-  </div> -->
+    <div class="grid grid--3">
+      <a class="card-link" href="service.html">
+        <div class="card">
+          <img src="images/service.jpg" alt="Service">
+          <h3>Үйлчилгээ</h3>
+          <p>Манай нэг төрлийн үйлчилгээний шийдэл.</p>
+          <p>Дэлгэрэнгүй мэдээлэл авахыг хүсвэл энд дарна уу.</p>
+        </div>
+      </a>
+    </div>
+  </div>
 
   <!-- CONTACT -->
   <div class="footer" id="contact">
@@ -338,8 +135,6 @@
     <h3>Холбоо барих</h3>
 
     <div class="footer-info">
-      <!-- <p>📞 94577757</p> -->
-
       <p>📘 Facebook:
         <a href="https://www.facebook.com/HunnuStone">Hunnu Stone</a>
       </p>
@@ -349,7 +144,9 @@
       <p>🌐 Website:
         <a href="http://hunnustone.com">www.hunnustone.com</a>
       </p>
-      <p>&nbsp;📍 Ulaanbaatar, Mongolia</p>
+      <p>📞   94577757
+      </p>
+      <p>&nbsp;📍 22 товчооны тойрогийн баруун урд Ulaanbaatar худалдааны төв,Ulaanbaatar, Mongolia </p>
     </div>
 
     <p class="copyright">
@@ -357,8 +154,6 @@
     </p>
 
   </div>
-
-
 
 </body>
 
