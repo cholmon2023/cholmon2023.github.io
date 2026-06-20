@@ -113,7 +113,7 @@ a {
 }
 
 .ad-slot__inner {
-  min-height: 90px;
+  /* min-height: 90px; */
   border-radius: 12px;
   background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
   display: flex;
