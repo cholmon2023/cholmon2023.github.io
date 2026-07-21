@@ -180,6 +180,48 @@ a {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.grid--small {
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.card--small {
+  height: 100px;
+  min-height: 100px;
+  display: grid;
+  place-items: center;
+  padding: 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.card--small:has(> img) > img {
+  width: 65% !important;
+  height: auto !important;
+  max-width: 55% !important;
+  max-height: 55px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  display: block;
+}
+.partner-card {
+  height: 100px;
+  padding: 20px;
+  box-sizing: border-box;
+
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.partner-card img {
+  width: 70% !important;
+  height: auto !important;
+  max-height: 50px !important;
+  display: block;
+  object-fit: contain;
+}
+
 .card-link {
   display: block;
   text-decoration: none;
