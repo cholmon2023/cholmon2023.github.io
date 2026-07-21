@@ -11,7 +11,7 @@ echo.
 git checkout -b %NEW_BRANCH%
 if errorlevel 1 goto ERROR
 
-git add .
+git add -A
 if errorlevel 1 goto ERROR
 
 git commit -m "Website update"
