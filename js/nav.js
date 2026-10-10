@@ -82,7 +82,7 @@
     var category = path.indexOf('/electric/') > -1 ? 'electric' : path.indexOf('/gas/') > -1 ? 'gas' : path.indexOf('/agri/') > -1 ? 'agri' : '';
     var related = {
       electric: [
-        { file: 'dj650.html', title: 'DJ600', spec: '600W • 60V/20AH • 200кг', image: 'IMG_20260726_180506.jpg' },
+        { file: 'sdl.html', title: 'SDL1200', spec: '1500W • 60V/52AH • 1000кг', image: 'sdl.jpg' },
         { file: 'dj1000.html', title: 'DJ800', spec: '1200W • 60V/45AH • 500кг', image: 'IMG_20260804_195847.jpg' },
         { file: 'dj1200.html', title: 'DJ1200', spec: '1200W • 72V/45AH • 600кг', image: '微信图片_20260527085102.jpg' },
         { file: 'dj1500-plus.html', title: 'DJ1500 Plus', spec: '1500W • 72V/52AH • 800кг', image: '160-g.jpg' }
